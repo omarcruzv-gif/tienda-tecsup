@@ -4,11 +4,13 @@ const productos = [
 ];
 
 function calcularTotal(lista) {
-  let total = 0;
-  for (const producto of lista) {
-    total = total + producto.precio;
-  }
-  return total;
+    let total = 0;
+
+    for (let producto of lista) {
+        total = total + (producto.precio * producto.cantidad);
+    }
+
+    return total;
 }
 
 document.getElementById("total").textContent =
